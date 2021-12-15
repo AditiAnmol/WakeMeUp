@@ -18,9 +18,9 @@
 		0534F7D12769A18600FDAC81 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7D02769A18600FDAC81 /* AudioController.swift */; };
 		0534F7D42769A1A700FDAC81 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7D32769A1A700FDAC81 /* Constants.swift */; };
 		0534F7DA2769A25C00FDAC81 /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7D92769A25C00FDAC81 /* AlarmViewModel.swift */; };
-		0534F7DC2769A27500FDAC81 /* TriggerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7DB2769A27500FDAC81 /* TriggerViewModel.swift */; };
-		0534F7E02769A29F00FDAC81 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7DF2769A29F00FDAC81 /* TimeViewModel.swift */; };
-		0534F7E22769A30100FDAC81 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E12769A30100FDAC81 /* TimerViewModel.swift */; };
+		0534F7DC2769A27500FDAC81 /* AlarmTriggeredViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7DB2769A27500FDAC81 /* AlarmTriggeredViewModel.swift */; };
+		0534F7E02769A29F00FDAC81 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7DF2769A29F00FDAC81 /* TimerViewModel.swift */; };
+		0534F7E22769A30100FDAC81 /* TimerActiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E12769A30100FDAC81 /* TimerActiveViewModel.swift */; };
 		0534F7E42769A31F00FDAC81 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E32769A31F00FDAC81 /* MusicListViewModel.swift */; };
 		0534F7E72769A6FA00FDAC81 /* ActivityRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E62769A6FA00FDAC81 /* ActivityRecognizer.swift */; };
 		0534F7E92769A8C700FDAC81 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E82769A8C700FDAC81 /* ViewRouter.swift */; };
@@ -65,9 +65,9 @@
 		0534F7D02769A18600FDAC81 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		0534F7D32769A1A700FDAC81 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0534F7D92769A25C00FDAC81 /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
-		0534F7DB2769A27500FDAC81 /* TriggerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerViewModel.swift; sourceTree = "<group>"; };
-		0534F7DF2769A29F00FDAC81 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
-		0534F7E12769A30100FDAC81 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		0534F7DB2769A27500FDAC81 /* AlarmTriggeredViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTriggeredViewModel.swift; sourceTree = "<group>"; };
+		0534F7DF2769A29F00FDAC81 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		0534F7E12769A30100FDAC81 /* TimerActiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActiveViewModel.swift; sourceTree = "<group>"; };
 		0534F7E32769A31F00FDAC81 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
 		0534F7E62769A6FA00FDAC81 /* ActivityRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecognizer.swift; sourceTree = "<group>"; };
 		0534F7E82769A8C700FDAC81 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
@@ -196,9 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				0534F7D92769A25C00FDAC81 /* AlarmViewModel.swift */,
-				0534F7DB2769A27500FDAC81 /* TriggerViewModel.swift */,
-				0534F7DF2769A29F00FDAC81 /* TimeViewModel.swift */,
-				0534F7E12769A30100FDAC81 /* TimerViewModel.swift */,
+				0534F7DB2769A27500FDAC81 /* AlarmTriggeredViewModel.swift */,
+				0534F7DF2769A29F00FDAC81 /* TimerViewModel.swift */,
+				0534F7E12769A30100FDAC81 /* TimerActiveViewModel.swift */,
 				0534F7E32769A31F00FDAC81 /* MusicListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -348,15 +348,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0534F7E22769A30100FDAC81 /* TimerViewModel.swift in Sources */,
+				0534F7E22769A30100FDAC81 /* TimerActiveViewModel.swift in Sources */,
 				0534F81B2769B47300FDAC81 /* AddTimer.swift in Sources */,
 				0534F7C92769A13B00FDAC81 /* NotificationController.swift in Sources */,
 				0534F8172769B41A00FDAC81 /* TimerListView.swift in Sources */,
-				0534F7DC2769A27500FDAC81 /* TriggerViewModel.swift in Sources */,
+				0534F7DC2769A27500FDAC81 /* AlarmTriggeredViewModel.swift in Sources */,
 				0534F7D12769A18600FDAC81 /* AudioController.swift in Sources */,
 				0534F8072769B15300FDAC81 /* TabBarItem.swift in Sources */,
 				0534F8092769B15300FDAC81 /* CircleProgressView.swift in Sources */,
-				0534F7E02769A29F00FDAC81 /* TimeViewModel.swift in Sources */,
+				0534F7E02769A29F00FDAC81 /* TimerViewModel.swift in Sources */,
 				050B43B6275D3758006A9026 /* WakeMeUp.xcdatamodeld in Sources */,
 				0534F8102769B15300FDAC81 /* EditAlarm.swift in Sources */,
 				0534F7CF2769A17B00FDAC81 /* TimerStorage.swift in Sources */,
