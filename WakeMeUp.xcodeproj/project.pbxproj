@@ -46,6 +46,10 @@
 		0534F8192769B45D00FDAC81 /* TimerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F8182769B45D00FDAC81 /* TimerCard.swift */; };
 		0534F81B2769B47300FDAC81 /* AddTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F81A2769B47300FDAC81 /* AddTimer.swift */; };
 		0534F81D2769B48F00FDAC81 /* DeleteTimerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F81C2769B48F00FDAC81 /* DeleteTimerCard.swift */; };
+		0534F8222769C7BC00FDAC81 /* Bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0534F81E2769C7BC00FDAC81 /* Bell.wav */; };
+		0534F8232769C7BC00FDAC81 /* Adventure.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0534F81F2769C7BC00FDAC81 /* Adventure.wav */; };
+		0534F8242769C7BC00FDAC81 /* Tenderness.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0534F8202769C7BC00FDAC81 /* Tenderness.wav */; };
+		0534F8252769C7BC00FDAC81 /* Once Again.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0534F8212769C7BC00FDAC81 /* Once Again.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,10 @@
 		0534F8182769B45D00FDAC81 /* TimerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCard.swift; sourceTree = "<group>"; };
 		0534F81A2769B47300FDAC81 /* AddTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimer.swift; sourceTree = "<group>"; };
 		0534F81C2769B48F00FDAC81 /* DeleteTimerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTimerCard.swift; sourceTree = "<group>"; };
+		0534F81E2769C7BC00FDAC81 /* Bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Bell.wav; path = "../../../../Downloads/stalarm-swiftui-main/Stalarm/Resources/Bell.wav"; sourceTree = "<group>"; };
+		0534F81F2769C7BC00FDAC81 /* Adventure.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Adventure.wav; path = "../../../../Downloads/stalarm-swiftui-main/Stalarm/Resources/Adventure.wav"; sourceTree = "<group>"; };
+		0534F8202769C7BC00FDAC81 /* Tenderness.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Tenderness.wav; path = "../../../../Downloads/stalarm-swiftui-main/Stalarm/Resources/Tenderness.wav"; sourceTree = "<group>"; };
+		0534F8212769C7BC00FDAC81 /* Once Again.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Once Again.wav"; path = "../../../../Downloads/stalarm-swiftui-main/Stalarm/Resources/Once Again.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,10 @@
 		0534F7D72769A21A00FDAC81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0534F81F2769C7BC00FDAC81 /* Adventure.wav */,
+				0534F81E2769C7BC00FDAC81 /* Bell.wav */,
+				0534F8212769C7BC00FDAC81 /* Once Again.wav */,
+				0534F8202769C7BC00FDAC81 /* Tenderness.wav */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -321,7 +333,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				050B43B1275D3758006A9026 /* Preview Assets.xcassets in Resources */,
+				0534F8222769C7BC00FDAC81 /* Bell.wav in Resources */,
 				050B43AE275D3758006A9026 /* Assets.xcassets in Resources */,
+				0534F8252769C7BC00FDAC81 /* Once Again.wav in Resources */,
+				0534F8242769C7BC00FDAC81 /* Tenderness.wav in Resources */,
+				0534F8232769C7BC00FDAC81 /* Adventure.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
