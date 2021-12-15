@@ -4,7 +4,6 @@ enum Page {
     case onboarding
     case notificationRequest
     case alarm
-    case timer
 }
 
 class ViewRouter: ObservableObject {

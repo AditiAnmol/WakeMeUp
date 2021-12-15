@@ -24,20 +24,20 @@ struct AddAlarm: View {
         NavigationView {
             Form {
                 Section(header: Text("Alarm Information")) {
-                    TextField("Alarm Name", text: $alarmName)
+                    TextField("Label", text: $alarmName)
                     DatePicker("Time", selection: $alarmDate, displayedComponents: .hourAndMinute)
                     NavigationLink(
                         destination: MusicList(selectedMusic: $alarmMusic),
                         label: {
                             HStack {
-                                Text("Music")
+                                Text("Sound")
                                 Spacer()
                                 Text(alarmMusic!)
                                     .foregroundColor(.gray)
                             }
                         })
                 }
-                Section(header: Text("Alarm Repeat")) {
+                Section(header: Text("Repeat")) {
                     HStack {
                         ForEach(alarmRepeat.indices, id: \.self) { index in
                             ZStack {
@@ -52,7 +52,7 @@ struct AddAlarm: View {
                         }
                     }
                 }
-                Section(header: Text("Alarm Activity")) {
+                Section(header: Text("Mission")) {
                     Picker("Duration", selection: $alarmDuration) {
                         ForEach(durations, id: \.self) { duration in
                             Text(duration)

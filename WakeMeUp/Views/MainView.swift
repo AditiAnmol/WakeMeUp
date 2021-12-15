@@ -24,8 +24,7 @@ struct MainView: View {
                         switch viewRouter.currentPage {
                             case .alarm:
                                 AlarmListView()
-                            default:
-                                TimerListView()
+                        default: AlarmListView()
                         }
                         Spacer()
                         ZStack {
@@ -44,7 +43,7 @@ struct MainView: View {
                                 }
                                 .rotationEffect(Angle(degrees: self.showPopUp ? 45 : 0))
                                 .offset(y: -geometry.size.height / 8 / 2)
-                                TabBarItem(viewRouter: viewRouter, width: geometry.size.width / 3, height: geometry.size.height / 28, pageName: .timer, iconName: "timer")
+//                                TabBarItem(viewRouter: viewRouter, width: geometry.size.width / 3, height: geometry.size.height / 28, pageName: .timer, iconName: "timer")
                             }
                             .frame(width: geometry.size.width, height: geometry.size.height / 8)
                             .background(Color("TabBarBackground").shadow(radius: 1))
@@ -77,12 +76,12 @@ struct PlusMenu: View {
             .sheet(isPresented: $showAddAlarm) {
                 AddAlarm()
             }
-            CircleButton(imageName: "timer", size: size) {
-                self.showAddTimer = true
-            }
-            .sheet(isPresented: $showAddTimer) {
-                AddTimer()
-            }
+//            CircleButton(imageName: "timer", size: size) {
+//                self.showAddTimer = true
+//            }
+//            .sheet(isPresented: $showAddTimer) {
+//                AddTimer()
+//            }
         }
         .transition(.scale)
     }

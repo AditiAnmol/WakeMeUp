@@ -26,6 +26,6 @@ struct AlarmListView: View {
                 }
             }
         }
-        .navigationTitle("My Alarm")
+        .navigationTitle("Alarm")
     }
 }

@@ -4,7 +4,7 @@ struct FirstPage: View {
     var body: some View {
         VStack(spacing: 20) {
             Image("stalarm-icon")
-            Text("Stalarm")
+            Text("WakeMeUp")
                 .font(.title)
             Text("An alarm that improve your \n self-discipline")
                 .multilineTextAlignment(.center)

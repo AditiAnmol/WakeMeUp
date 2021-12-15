@@ -32,6 +32,7 @@ class AlarmStorage: NSObject, ObservableObject {
         let context = PersistenceController.shared.persistentContainer.viewContext
         let alarm = Alarm(context: context)
 
+        alarm.active = true
         alarm.id = id
         alarm.name = name
         alarm.time = time
