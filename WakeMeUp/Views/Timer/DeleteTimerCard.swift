@@ -1,8 +1,8 @@
 import SwiftUI
 
-struct AlarmDeleteCard: View {
-    @StateObject private var viewModel = AlarmViewModel()
-    var alarm: Alarm
+struct DeleteTimerCard: View {
+    @EnvironmentObject private var viewModel: TimerViewModel
+    var timer: CountdownTimer
     
     var body: some View {
         ZStack {
@@ -23,13 +23,13 @@ struct AlarmDeleteCard: View {
         .cornerRadius(25)
         .padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
         .onTapGesture {
-            viewModel.delete(alarm: alarm)
+            viewModel.delete(timer: timer)
         }
     }
 }
 
-struct DeleteCard_Previews: PreviewProvider {
+struct DeleteTimerCard_Previews: PreviewProvider {
     static var previews: some View {
-        AlarmDeleteCard(alarm: Alarm())
+        DeleteTimerCard(timer: CountdownTimer())
     }
 }

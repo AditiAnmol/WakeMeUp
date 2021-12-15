@@ -1,10 +1,3 @@
-//
-//  FirstPage.swift
-//  WakeMeUp
-//
-//  Created by Jainam Sheth on 12/14/21.
-//
-
 import SwiftUI
 
 struct FirstPage: View {

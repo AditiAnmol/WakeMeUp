@@ -1,10 +1,3 @@
-//
-//  MainView.swift
-//  WakeMeUp
-//
-//  Created by Jainam Sheth on 12/14/21.
-//
-
 import SwiftUI
 
 struct MainView: View {
@@ -66,8 +59,7 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewRouter: ViewRouter(page: .alarm))
-            .environmentObject(NotificationRequestManager())
+        MainView(viewRouter: ViewRouter())
     }
 }
 

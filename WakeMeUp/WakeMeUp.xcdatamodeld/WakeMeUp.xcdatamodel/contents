@@ -6,7 +6,7 @@
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="music" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="repeatDay" optional="YES" attributeType="String"/>
+        <attribute name="repeatDay" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformerName" customClassName="[String]"/>
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="CountdownTimer" representedClassName="CountdownTimer" syncable="YES" codeGenerationType="class">
@@ -15,7 +15,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Alarm" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Alarm" positionX="-63" positionY="-18" width="128" height="134"/>
         <element name="CountdownTimer" positionX="-63" positionY="-9" width="128" height="88"/>
     </elements>
 </model>
