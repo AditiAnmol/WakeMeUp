@@ -67,6 +67,7 @@
 		050B439D275D3757006A9026 = {
 			isa = PBXGroup;
 			children = (
+				0534F7E52769A6EA00FDAC81 /* Helper */,
 				050B43A8275D3757006A9026 /* WakeMeUp */,
 				050B43A7275D3757006A9026 /* Products */,
 			);
@@ -111,7 +112,6 @@
 				0534F7CC2769A16F00FDAC81 /* AlarmStorage.swift */,
 				0534F7CE2769A17B00FDAC81 /* TimerStorage.swift */,
 				0534F7D02769A18600FDAC81 /* AudioController.swift */,
-				0534F7E52769A6EA00FDAC81 /* Helper */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
