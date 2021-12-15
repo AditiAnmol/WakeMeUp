@@ -67,7 +67,6 @@
 		050B439D275D3757006A9026 = {
 			isa = PBXGroup;
 			children = (
-				0534F7E52769A6EA00FDAC81 /* Helper */,
 				050B43A8275D3757006A9026 /* WakeMeUp */,
 				050B43A7275D3757006A9026 /* Products */,
 			);
@@ -84,6 +83,7 @@
 		050B43A8275D3757006A9026 /* WakeMeUp */ = {
 			isa = PBXGroup;
 			children = (
+				0534F7E52769A6EA00FDAC81 /* Helper */,
 				0534F7D82769A22F00FDAC81 /* ViewModels */,
 				0534F7D72769A21A00FDAC81 /* Resources */,
 				0534F7D62769A1EC00FDAC81 /* MainApp */,
