@@ -42,7 +42,7 @@ struct AddAlarm: View {
                         ForEach(alarmRepeat.indices, id: \.self) { index in
                             ZStack {
                                 Circle()
-                                    .fill(alarmRepeat[index].1 ? Color(#colorLiteral(red: 0.5098039216, green: 0.4470588235, blue: 0.8431372549, alpha: 1)) : Color(#colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)))
+                                    .fill(alarmRepeat[index].1 ? Color("TabBarHighlight") : Color(#colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)))
                                 Text(alarmRepeat[index].0.first?.description ?? "")
                                     .foregroundColor(.white)
                                     .onTapGesture {
