@@ -6,8 +6,8 @@ struct NotificationRequest: View {
     var body: some View {
         VStack {
             VStack(spacing: 20) {
-                Image("notification-icon")
-                Text("Everytime you want to stop an \n alarm, you need to get out of bed \n and move first")
+                Image("")
+                Text("To stop the alarm \n take the desired steps \n to complete your activity!")
                     .multilineTextAlignment(.center)
                     .font(.title3)
             }
@@ -16,7 +16,7 @@ struct NotificationRequest: View {
                 Button(action: requestNotification, label: {
                     Text("Allow notifications")
                         .frame(width: 250, height: 45, alignment: .center)
-                        .background(Color(#colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)))
+                        .background(Color("TabBarHighlight"))
                         .cornerRadius(25)
                         .foregroundColor(.white)
                 })

@@ -12,7 +12,7 @@ struct AlarmNotificationView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)), Color(#colorLiteral(red: 0.5921568627, green: 0.3921568627, blue: 0.7607843137, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.4763713479, green: 0.7747156024, blue: 0.7603972554, alpha: 1)), Color(#colorLiteral(red: 0, green: 0.6949792504, blue: 0.7264153361, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
             VStack {
                 Text(alarmName)
                     .font(.largeTitle)

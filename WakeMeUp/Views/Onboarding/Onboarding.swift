@@ -5,7 +5,7 @@ struct Onboarding: View {
     @State private var currentTab = 0
     
     init() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = #colorLiteral(red: 0.5921568627, green: 0.3921568627, blue: 0.7607843137, alpha: 1)
+        UIPageControl.appearance().currentPageIndicatorTintColor = #colorLiteral(red: 0.4754182696, green: 0.7763083577, blue: 0.7592564225, alpha: 1)
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
     }
     

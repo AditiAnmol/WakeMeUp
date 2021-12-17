@@ -7,19 +7,18 @@ struct SecondPage: View {
     var body: some View {
         VStack {
             VStack(spacing: 20) {
-                Image("footstep-icon")
-                Text("Stopping Alarm")
+                Text("Walk To Stop")
                     .font(.title)
-                Text("Everytime you want to stop an \n alarm, you need to get out of bed \n and walk first")
+                Text("To stop the alarm \n take the desired steps \n to complete your activity!")
                     .multilineTextAlignment(.center)
                     .font(.title3)
             }
             .offset(y: -70)
             VStack {
                 Button(action: goToNotificationPage, label: {
-                    Text("Let's get disciplined!")
+                    Text("Let's Go!")
                         .frame(width: 250, height: 45, alignment: .center)
-                        .background(Color(#colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)))
+                        .background(Color("TabBarHighlight"))
                         .cornerRadius(25)
                         .foregroundColor(.white)
                 })
