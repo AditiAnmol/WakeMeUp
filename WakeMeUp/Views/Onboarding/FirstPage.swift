@@ -3,10 +3,10 @@ import SwiftUI
 struct FirstPage: View {
     var body: some View {
         VStack(spacing: 20) {
-            Image("stalarm-icon")
+            Image("main-icon")
             Text("WakeMeUp")
                 .font(.title)
-            Text("An alarm that improve your \n self-discipline")
+            Text("Just another self-discipline alarm \n so lets get going!")
                 .multilineTextAlignment(.center)
                 .font(.title3)
         }

@@ -71,6 +71,7 @@ struct AddAlarm: View {
     }
     
     private func saveAlarm() {
+        print(self.alarmDate)
         viewModel.addAlarm(name: self.alarmName, time: self.alarmDate, music: self.alarmMusic!, alarmDuration: self.alarmDuration, repeats: self.alarmRepeat)
         
         self.dismissSheet()

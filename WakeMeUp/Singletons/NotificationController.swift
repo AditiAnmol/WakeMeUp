@@ -25,15 +25,15 @@ class NotificationController {
     }
     
     func scheduleRepeatedNotification(id: String, title: String, for days: [(String, Bool)], on date: Date, stopDuration duration: String, musicName: String) {
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.subtitle = "Let's get moving!"
-        content.userInfo = [
+        let notification = UNMutableNotificationContent()
+        notification.title = title
+        notification.subtitle = "Let's get moving!"
+        notification.userInfo = [
             "title": title,
             "duration": duration,
             "music": musicName
         ]
-        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "\(musicName).wav"))
+        notification.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "\(musicName).wav"))
         
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
@@ -50,7 +50,7 @@ class NotificationController {
                 dateComponents.timeZone = .current
                 
                 let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-                let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+                let request = UNNotificationRequest(identifier: requestIdentifier, content: notification, trigger: trigger)
                 UNUserNotificationCenter.current().add(request)
             }
         }
