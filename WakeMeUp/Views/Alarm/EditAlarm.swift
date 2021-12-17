@@ -27,7 +27,7 @@ struct EditAlarm: View {
         
         var repeats = alarmRepeat
         for i in repeats.indices {
-            repeats[i].1 = alarm.repeatDay!.contains(alarmRepeat[i].0)
+            repeats[i].1 = alarm.repeatOn!.contains(alarmRepeat[i].0)
         }
         
         _alarmRepeat = State(initialValue: repeats)

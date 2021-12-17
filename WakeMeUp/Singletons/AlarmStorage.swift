@@ -38,7 +38,7 @@ class AlarmStorage: NSObject, ObservableObject {
         alarm.time = time
         alarm.music = music
         alarm.activityDuration = activityDuration
-        alarm.repeatDay = repeats
+        alarm.repeatOn = repeats
 
         try? context.save()
     }
@@ -49,7 +49,7 @@ class AlarmStorage: NSObject, ObservableObject {
         alarm.time = time
         alarm.music = music
         alarm.activityDuration = activityDuration
-        alarm.repeatDay = repeats
+        alarm.repeatOn = repeats
         
         try? context.save()
     }

@@ -40,7 +40,7 @@ class AlarmViewModel: ObservableObject {
     func toggleAlarm(for alarm: Alarm) {
         AlarmStorage.shared.toggle(alarm: alarm)
         if alarm.active {
-            NotificationController.shared.scheduleRepeatedNotification(id: alarm.id!, title: alarm.name!, for: self.daysToTuple(from: alarm.repeatDay!), on: alarm.time!, stopDuration: self.secondToString(from: alarm.activityDuration), musicName: alarm.music!)
+            NotificationController.shared.scheduleRepeatedNotification(id: alarm.id!, title: alarm.name!, for: self.daysToTuple(from: alarm.repeatOn!), on: alarm.time!, stopDuration: self.secondToString(from: alarm.activityDuration), musicName: alarm.music!)
         } else {
             NotificationController.shared.cancelScheduledNotification(for: alarm.id!)
         }

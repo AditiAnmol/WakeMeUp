@@ -27,7 +27,7 @@ struct AlarmCard: View {
             }
             Spacer()
             HStack(spacing: 10) {
-                ForEach(alarm.repeatDay ?? [], id:\.self) { day in
+                ForEach(alarm.repeatOn ?? [], id:\.self) { day in
                     Text(day)
                 }
                 Spacer()
@@ -36,7 +36,7 @@ struct AlarmCard: View {
             .background(Color.white.opacity(0.2))
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(LinearGradient(gradient: Gradient(colors: self.alarm.active ? [Color(#colorLiteral(red: 0.5921568627, green: 0.3921568627, blue: 0.7607843137, alpha: 1)), Color(#colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1))] : [Color.gray, Color.gray]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .background(LinearGradient(gradient: Gradient(colors: self.alarm.active ? [Color(#colorLiteral(red: 0.4763713479, green: 0.7747156024, blue: 0.7603972554, alpha: 1)), Color(#colorLiteral(red: 0, green: 0.6949792504, blue: 0.7264153361, alpha: 1))] : [Color.gray, Color.gray]), startPoint: .topLeading, endPoint: .bottomTrailing))
         .cornerRadius(25)
         .padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
         .foregroundColor(self.alarm.active ? .white : .black)
