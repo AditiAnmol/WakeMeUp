@@ -3,7 +3,6 @@ import SwiftUI
 struct MainView: View {
     @StateObject var viewRouter: ViewRouter
     @EnvironmentObject var notificationRequestManager: NotificationRequestManager
-//    @State var showPopUp = false
     
     var body: some View {
         if (notificationRequestManager.notificationData != nil) {
@@ -26,23 +25,7 @@ struct MainView: View {
                         }
                         Spacer()
                         ZStack {
-//                            if self.showPopUp {
-//                                PlusMenu(size: geometry.size.width / 8)
-//                                    .offset(y: -geometry.size.height / 8)
-//                            }
                             HStack {
-                                TabBarItem(viewRouter: viewRouter, width: geometry.size.width / 2, height: geometry.size.height / 28, pageName: .alarm, iconName: "alarm")
-//                                    .border(Color.black)
-//                                VStack {
-//                                    CircleButton(imageName: "plus", size: geometry.size.width / 7 - 4) {
-//                                        withAnimation {
-//                                            self.showPopUp.toggle()
-//                                        }
-//                                    }
-//                                }
-//                                .rotationEffect(Angle(degrees: self.showPopUp ? 45 : 0))
-//                                .offset(y: -geometry.size.height / 8 / 2)
-//                                TabBarItem(viewRouter: viewRouter, width: geometry.size.width / 3, height: geometry.size.height / 28, pageName: .timer, iconName: "timer")
                                 PlusMenu(size: geometry.size.width / 8)
                                     .frame(width: geometry.size.width / 2, height: geometry.size.height / 28)
                                     .offset(y: -17)
@@ -67,7 +50,6 @@ struct ContentView_Previews: PreviewProvider {
 
 struct PlusMenu: View {
     @State private var showAddAlarm = false
-    @State private var showAddTimer = false
     
     let size: CGFloat
    
@@ -79,12 +61,6 @@ struct PlusMenu: View {
             .sheet(isPresented: $showAddAlarm) {
                 AddAlarm()
             }
-//            CircleButton(imageName: "timer", size: size) {
-//                self.showAddTimer = true
-//            }
-//            .sheet(isPresented: $showAddTimer) {
-//                AddTimer()
-//            }
         }
         .transition(.scale)
     }

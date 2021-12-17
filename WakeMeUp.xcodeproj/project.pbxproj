@@ -14,13 +14,10 @@
 		0534F7C92769A13B00FDAC81 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7C82769A13B00FDAC81 /* NotificationController.swift */; };
 		0534F7CB2769A15000FDAC81 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7CA2769A15000FDAC81 /* PersistenceController.swift */; };
 		0534F7CD2769A16F00FDAC81 /* AlarmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7CC2769A16F00FDAC81 /* AlarmStorage.swift */; };
-		0534F7CF2769A17B00FDAC81 /* TimerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7CE2769A17B00FDAC81 /* TimerStorage.swift */; };
 		0534F7D12769A18600FDAC81 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7D02769A18600FDAC81 /* AudioController.swift */; };
 		0534F7D42769A1A700FDAC81 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7D32769A1A700FDAC81 /* Constants.swift */; };
 		0534F7DA2769A25C00FDAC81 /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7D92769A25C00FDAC81 /* AlarmViewModel.swift */; };
 		0534F7DC2769A27500FDAC81 /* AlarmTriggeredViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7DB2769A27500FDAC81 /* AlarmTriggeredViewModel.swift */; };
-		0534F7E02769A29F00FDAC81 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7DF2769A29F00FDAC81 /* TimerViewModel.swift */; };
-		0534F7E22769A30100FDAC81 /* TimerActiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E12769A30100FDAC81 /* TimerActiveViewModel.swift */; };
 		0534F7E42769A31F00FDAC81 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E32769A31F00FDAC81 /* MusicListViewModel.swift */; };
 		0534F7E72769A6FA00FDAC81 /* ActivityRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E62769A6FA00FDAC81 /* ActivityRecognizer.swift */; };
 		0534F7E92769A8C700FDAC81 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7E82769A8C700FDAC81 /* ViewRouter.swift */; };
@@ -31,7 +28,6 @@
 		0534F8072769B15300FDAC81 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7F42769B15300FDAC81 /* TabBarItem.swift */; };
 		0534F8082769B15300FDAC81 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7F52769B15300FDAC81 /* MainView.swift */; };
 		0534F8092769B15300FDAC81 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7F62769B15300FDAC81 /* CircleProgressView.swift */; };
-		0534F80A2769B15300FDAC81 /* TimerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7F72769B15300FDAC81 /* TimerPicker.swift */; };
 		0534F80B2769B15300FDAC81 /* MusicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7F92769B15300FDAC81 /* MusicList.swift */; };
 		0534F80C2769B15300FDAC81 /* AddAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7FA2769B15300FDAC81 /* AddAlarm.swift */; };
 		0534F80D2769B15300FDAC81 /* AlarmCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F7FB2769B15300FDAC81 /* AlarmCard.swift */; };
@@ -42,10 +38,6 @@
 		0534F8122769B15300FDAC81 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F8012769B15300FDAC81 /* FirstPage.swift */; };
 		0534F8132769B15300FDAC81 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F8022769B15300FDAC81 /* SecondPage.swift */; };
 		0534F8142769B15300FDAC81 /* NotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F8032769B15300FDAC81 /* NotificationRequest.swift */; };
-		0534F8172769B41A00FDAC81 /* TimerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F8162769B41A00FDAC81 /* TimerListView.swift */; };
-		0534F8192769B45D00FDAC81 /* TimerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F8182769B45D00FDAC81 /* TimerCard.swift */; };
-		0534F81B2769B47300FDAC81 /* AddTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F81A2769B47300FDAC81 /* AddTimer.swift */; };
-		0534F81D2769B48F00FDAC81 /* DeleteTimerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534F81C2769B48F00FDAC81 /* DeleteTimerCard.swift */; };
 		0534F82A2769CE9C00FDAC81 /* Bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0534F8262769CE9C00FDAC81 /* Bell.wav */; };
 		0534F82B2769CE9C00FDAC81 /* Tenderness.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0534F8272769CE9C00FDAC81 /* Tenderness.wav */; };
 		0534F82C2769CE9C00FDAC81 /* Adventure.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0534F8282769CE9C00FDAC81 /* Adventure.wav */; };
@@ -61,13 +53,10 @@
 		0534F7C82769A13B00FDAC81 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		0534F7CA2769A15000FDAC81 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		0534F7CC2769A16F00FDAC81 /* AlarmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStorage.swift; sourceTree = "<group>"; };
-		0534F7CE2769A17B00FDAC81 /* TimerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStorage.swift; sourceTree = "<group>"; };
 		0534F7D02769A18600FDAC81 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		0534F7D32769A1A700FDAC81 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0534F7D92769A25C00FDAC81 /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
 		0534F7DB2769A27500FDAC81 /* AlarmTriggeredViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTriggeredViewModel.swift; sourceTree = "<group>"; };
-		0534F7DF2769A29F00FDAC81 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
-		0534F7E12769A30100FDAC81 /* TimerActiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActiveViewModel.swift; sourceTree = "<group>"; };
 		0534F7E32769A31F00FDAC81 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
 		0534F7E62769A6FA00FDAC81 /* ActivityRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecognizer.swift; sourceTree = "<group>"; };
 		0534F7E82769A8C700FDAC81 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
@@ -78,7 +67,6 @@
 		0534F7F42769B15300FDAC81 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		0534F7F52769B15300FDAC81 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0534F7F62769B15300FDAC81 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
-		0534F7F72769B15300FDAC81 /* TimerPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPicker.swift; sourceTree = "<group>"; };
 		0534F7F92769B15300FDAC81 /* MusicList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicList.swift; sourceTree = "<group>"; };
 		0534F7FA2769B15300FDAC81 /* AddAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlarm.swift; sourceTree = "<group>"; };
 		0534F7FB2769B15300FDAC81 /* AlarmCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCard.swift; sourceTree = "<group>"; };
@@ -90,10 +78,6 @@
 		0534F8022769B15300FDAC81 /* SecondPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
 		0534F8032769B15300FDAC81 /* NotificationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRequest.swift; sourceTree = "<group>"; };
 		0534F8152769B17C00FDAC81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		0534F8162769B41A00FDAC81 /* TimerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListView.swift; sourceTree = "<group>"; };
-		0534F8182769B45D00FDAC81 /* TimerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCard.swift; sourceTree = "<group>"; };
-		0534F81A2769B47300FDAC81 /* AddTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimer.swift; sourceTree = "<group>"; };
-		0534F81C2769B48F00FDAC81 /* DeleteTimerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTimerCard.swift; sourceTree = "<group>"; };
 		0534F8262769CE9C00FDAC81 /* Bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bell.wav; sourceTree = "<group>"; };
 		0534F8272769CE9C00FDAC81 /* Tenderness.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tenderness.wav; sourceTree = "<group>"; };
 		0534F8282769CE9C00FDAC81 /* Adventure.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Adventure.wav; sourceTree = "<group>"; };
@@ -159,7 +143,6 @@
 				0534F7C82769A13B00FDAC81 /* NotificationController.swift */,
 				0534F7CA2769A15000FDAC81 /* PersistenceController.swift */,
 				0534F7CC2769A16F00FDAC81 /* AlarmStorage.swift */,
-				0534F7CE2769A17B00FDAC81 /* TimerStorage.swift */,
 				0534F7D02769A18600FDAC81 /* AudioController.swift */,
 			);
 			path = Singletons;
@@ -197,8 +180,6 @@
 			children = (
 				0534F7D92769A25C00FDAC81 /* AlarmViewModel.swift */,
 				0534F7DB2769A27500FDAC81 /* AlarmTriggeredViewModel.swift */,
-				0534F7DF2769A29F00FDAC81 /* TimerViewModel.swift */,
-				0534F7E12769A30100FDAC81 /* TimerActiveViewModel.swift */,
 				0534F7E32769A31F00FDAC81 /* MusicListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -220,9 +201,7 @@
 				0534F7F42769B15300FDAC81 /* TabBarItem.swift */,
 				0534F7F52769B15300FDAC81 /* MainView.swift */,
 				0534F7F62769B15300FDAC81 /* CircleProgressView.swift */,
-				0534F7F72769B15300FDAC81 /* TimerPicker.swift */,
 				0534F7EF2769B15300FDAC81 /* AlarmTriggered */,
-				0534F7F32769B15300FDAC81 /* Timer */,
 				0534F7F82769B15300FDAC81 /* Alarm */,
 				0534F7FF2769B15300FDAC81 /* Onboarding */,
 			);
@@ -237,17 +216,6 @@
 				0534F7F22769B15300FDAC81 /* AlarmNotificationView.swift */,
 			);
 			path = AlarmTriggered;
-			sourceTree = "<group>";
-		};
-		0534F7F32769B15300FDAC81 /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				0534F8162769B41A00FDAC81 /* TimerListView.swift */,
-				0534F8182769B45D00FDAC81 /* TimerCard.swift */,
-				0534F81A2769B47300FDAC81 /* AddTimer.swift */,
-				0534F81C2769B48F00FDAC81 /* DeleteTimerCard.swift */,
-			);
-			path = Timer;
 			sourceTree = "<group>";
 		};
 		0534F7F82769B15300FDAC81 /* Alarm */ = {
@@ -348,26 +316,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0534F7E22769A30100FDAC81 /* TimerActiveViewModel.swift in Sources */,
-				0534F81B2769B47300FDAC81 /* AddTimer.swift in Sources */,
 				0534F7C92769A13B00FDAC81 /* NotificationController.swift in Sources */,
-				0534F8172769B41A00FDAC81 /* TimerListView.swift in Sources */,
 				0534F7DC2769A27500FDAC81 /* AlarmTriggeredViewModel.swift in Sources */,
 				0534F7D12769A18600FDAC81 /* AudioController.swift in Sources */,
 				0534F8072769B15300FDAC81 /* TabBarItem.swift in Sources */,
 				0534F8092769B15300FDAC81 /* CircleProgressView.swift in Sources */,
-				0534F7E02769A29F00FDAC81 /* TimerViewModel.swift in Sources */,
 				050B43B6275D3758006A9026 /* WakeMeUp.xcdatamodeld in Sources */,
 				0534F8102769B15300FDAC81 /* EditAlarm.swift in Sources */,
-				0534F7CF2769A17B00FDAC81 /* TimerStorage.swift in Sources */,
-				0534F8192769B45D00FDAC81 /* TimerCard.swift in Sources */,
 				0534F7E72769A6FA00FDAC81 /* ActivityRecognizer.swift in Sources */,
 				0534F80B2769B15300FDAC81 /* MusicList.swift in Sources */,
 				0534F8142769B15300FDAC81 /* NotificationRequest.swift in Sources */,
 				0534F8062769B15300FDAC81 /* AlarmNotificationView.swift in Sources */,
 				0534F8112769B15300FDAC81 /* Onboarding.swift in Sources */,
 				0534F80D2769B15300FDAC81 /* AlarmCard.swift in Sources */,
-				0534F80A2769B15300FDAC81 /* TimerPicker.swift in Sources */,
 				0534F8122769B15300FDAC81 /* FirstPage.swift in Sources */,
 				0534F7DA2769A25C00FDAC81 /* AlarmViewModel.swift in Sources */,
 				0534F7D42769A1A700FDAC81 /* Constants.swift in Sources */,
@@ -379,7 +340,6 @@
 				0534F8042769B15300FDAC81 /* MainTriggeredAlarmView.swift in Sources */,
 				0534F8052769B15300FDAC81 /* AlarmStopView.swift in Sources */,
 				0534F8082769B15300FDAC81 /* MainView.swift in Sources */,
-				0534F81D2769B48F00FDAC81 /* DeleteTimerCard.swift in Sources */,
 				0534F80C2769B15300FDAC81 /* AddAlarm.swift in Sources */,
 				0534F80F2769B15300FDAC81 /* AlarmListView.swift in Sources */,
 				050B43AA275D3757006A9026 /* WakeMeUpApp.swift in Sources */,
