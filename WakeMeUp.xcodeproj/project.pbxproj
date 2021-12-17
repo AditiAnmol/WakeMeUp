@@ -120,7 +120,7 @@
 				0534F7D62769A1EC00FDAC81 /* MainApp */,
 				050B43AF275D3758006A9026 /* Preview Content */,
 				0534F7D72769A21A00FDAC81 /* Resources */,
-				0534F7C72769973500FDAC81 /* Singletons */,
+				0534F7C72769973500FDAC81 /* Controllers */,
 				0534F7D22769A18F00FDAC81 /* Utilities */,
 				0534F7D82769A22F00FDAC81 /* ViewModels */,
 				0534F7EE2769B15300FDAC81 /* Views */,
@@ -137,7 +137,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0534F7C72769973500FDAC81 /* Singletons */ = {
+		0534F7C72769973500FDAC81 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				0534F7C82769A13B00FDAC81 /* NotificationController.swift */,
@@ -145,7 +145,7 @@
 				0534F7CC2769A16F00FDAC81 /* AlarmStorage.swift */,
 				0534F7D02769A18600FDAC81 /* AudioController.swift */,
 			);
-			path = Singletons;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		0534F7D22769A18F00FDAC81 /* Utilities */ = {

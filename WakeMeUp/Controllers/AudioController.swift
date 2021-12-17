@@ -17,7 +17,7 @@ class AudioController {
             player = try AVAudioPlayer(contentsOf: musicList[name]!!)
             player.play()
         } catch {
-            fatalError("Cannot play music for \(name)")
+            fatalError("Can't play music for \(name)")
         }
     }
 }

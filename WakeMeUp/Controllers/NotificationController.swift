@@ -12,6 +12,7 @@ class NotificationController {
         }
     }
     
+    //
     func requestNotificationPermission(completion: @escaping () -> Void) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
@@ -24,6 +25,7 @@ class NotificationController {
         }
     }
     
+    // 
     func scheduleRepeatedNotification(id: String, title: String, for days: [(String, Bool)], on date: Date, stopDuration duration: String, musicName: String) {
         let notification = UNMutableNotificationContent()
         notification.title = title

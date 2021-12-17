@@ -1,5 +1,6 @@
 import CoreData
 
+// Storing the context, changed according to app needs from auto generation
 class PersistenceController {
     static let shared = PersistenceController()
     
