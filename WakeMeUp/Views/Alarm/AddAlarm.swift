@@ -8,6 +8,7 @@ struct AddAlarm: View {
     
     @State private var alarmName = ""
     @State private var alarmDate = Date()
+    @State private var actualAlarmDate = Date()
     @State private var alarmMusic: String? = "Adventure"
     @State private var alarmDuration = "0 min"
     @State private var alarmRepeat = [
@@ -26,6 +27,9 @@ struct AddAlarm: View {
                 Section(header: Text("Alarm Information")) {
                     TextField("Label", text: $alarmName)
                     DatePicker("Time", selection: $alarmDate, displayedComponents: .hourAndMinute)
+                        .onChange(of: alarmDate) { date in
+                            actualAlarmDate = date
+                        }
                     NavigationLink(
                         destination: MusicList(selectedMusic: $alarmMusic),
                         label: {
@@ -71,8 +75,7 @@ struct AddAlarm: View {
     }
     
     private func saveAlarm() {
-        print(self.alarmDate)
-        viewModel.addAlarm(name: self.alarmName, time: self.alarmDate, music: self.alarmMusic!, alarmDuration: self.alarmDuration, repeats: self.alarmRepeat)
+        viewModel.addAlarm(name: self.alarmName, time: self.actualAlarmDate, music: self.alarmMusic!, alarmDuration: self.alarmDuration, repeats: self.alarmRepeat)
         
         self.dismissSheet()
     }
