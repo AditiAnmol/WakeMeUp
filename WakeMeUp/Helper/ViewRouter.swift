@@ -16,5 +16,9 @@ class ViewRouter: ObservableObject {
             currentPage = .alarm
         }
     }
+    
+    init(page: Page) {
+        currentPage = page
+    }
 }
 
