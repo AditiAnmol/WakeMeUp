@@ -15,4 +15,9 @@ extension NotificationRequestManager: UNUserNotificationCenterDelegate {
         
         completionHandler()
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("presenting local notification in foreground");
+        completionHandler([.banner, .list, .sound])
+    }
 }

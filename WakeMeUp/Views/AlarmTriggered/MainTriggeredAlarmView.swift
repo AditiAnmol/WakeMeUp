@@ -25,9 +25,14 @@ struct MainTriggeredAlarmView: View {
         }
         .onAppear(perform: {
             alarmName = (notificationRequestManager.notificationData.notification.request.content.userInfo["title"] as? String)!
-            let time = (notificationRequestManager.notificationData.notification.request.content.userInfo["duration"] as? String)!
+
+
+            let duration = (notificationRequestManager.notificationData.notification.request.content.userInfo["duration"] as? String)!
             
-            let str = time.split(separator: " ")
+//            alarmName = "Some Name"
+//            let duration = "1 min"
+            
+            let str = duration.split(separator: " ")
             alarmTime = Int16(Double(str[0])! * 60)
         })
     }

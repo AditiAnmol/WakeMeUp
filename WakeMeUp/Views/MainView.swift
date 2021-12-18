@@ -6,6 +6,7 @@ struct MainView: View {
     
     var body: some View {
         if (notificationRequestManager.notificationData != nil) {
+//            if (true) {
             MainTriggeredAlarmView()
                 .environmentObject(notificationRequestManager)
                 .environmentObject(viewRouter)

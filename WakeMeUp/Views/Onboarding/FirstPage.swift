@@ -3,7 +3,6 @@ import SwiftUI
 struct FirstPage: View {
     var body: some View {
         VStack(spacing: 20) {
-            Image("main-icon")
             Text("WakeMeUp")
                 .font(.title)
             Text("Just another self-discipline alarm \n so lets get going!")
