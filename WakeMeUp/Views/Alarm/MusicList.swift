@@ -1,8 +1,9 @@
 import SwiftUI
 
+// Shows the current music list and plays sound on tap of the music selected
 struct MusicList: View {
     @Environment(\.presentationMode) var presentationMode
-    @State private var viewModel = MusicListViewModel()
+    @State private var viewModel = MusicModel()
     let musics = ["Adventure", "Bell", "Once Again", "Tenderness"]
     
     @Binding var selectedMusic: String?

@@ -6,12 +6,11 @@ struct MainView: View {
     
     var body: some View {
         if (notificationRequestManager.notificationData != nil) {
-//            if (true) {
-            MainTriggeredAlarmView()
+            AlarmActivityView()
                 .environmentObject(notificationRequestManager)
                 .environmentObject(viewRouter)
         } else if viewRouter.currentPage == .onboarding {
-            Onboarding()
+            WelcomeScreens()
                 .environmentObject(viewRouter)
         } else if viewRouter.currentPage == .notificationRequest {
             NotificationRequest()
@@ -27,7 +26,7 @@ struct MainView: View {
                         Spacer()
                         ZStack {
                             HStack {
-                                PlusMenu(size: geometry.size.width / 8)
+                                PlusIcon(size: geometry.size.width / 8)
                                     .frame(width: geometry.size.width / 2, height: geometry.size.height / 28)
                                     .offset(y: -17)
                             }
@@ -42,21 +41,15 @@ struct MainView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView(viewRouter: ViewRouter(page: .alarm))
-            .environmentObject(NotificationRequestManager())
-    }
-}
-
-struct PlusMenu: View {
+// On click of plus button, shows the Add Alarm in sheet
+struct PlusIcon: View {
     @State private var showAddAlarm = false
     
     let size: CGFloat
    
     var body: some View {
         HStack(spacing: 50) {
-            CircleButton(imageName: "plus", size: size/1.25) {
+            CircleButton(iconName: "plus", buttonSize: size/1.25) {
                 self.showAddAlarm = true
             }
             .sheet(isPresented: $showAddAlarm) {
@@ -67,9 +60,10 @@ struct PlusMenu: View {
     }
 }
 
+// Button styling as circle
 struct CircleButton: View {
-    var imageName: String
-    var size: CGFloat
+    var iconName: String
+    var buttonSize: CGFloat
     var action: () -> Void
     
     var body: some View {
@@ -77,10 +71,17 @@ struct CircleButton: View {
             ZStack {
                 Circle()
                     .fill(Color("CenterButton"))
-                    .frame(width: size, height: size)
-                Image(systemName: imageName)
+                    .frame(width: buttonSize, height: buttonSize)
+                Image(systemName: iconName)
                     .foregroundColor(.white)
             }
         }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView(viewRouter: ViewRouter(page: .alarm))
+            .environmentObject(NotificationRequestManager())
     }
 }

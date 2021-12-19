@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AlarmDeleteCard: View {
-    @StateObject private var viewModel = AlarmViewModel()
+    @StateObject private var viewModel = AlarmModel()
     var alarm: Alarm
     
     var body: some View {

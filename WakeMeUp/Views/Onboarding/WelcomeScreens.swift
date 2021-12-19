@@ -1,6 +1,9 @@
 import SwiftUI
 
-struct Onboarding: View {
+/*
+ Shows the welcome screen for the first time users.
+ */
+struct WelcomeScreens: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @State private var currentTab = 0
     
@@ -25,6 +28,6 @@ struct Onboarding: View {
 
 struct Onboarding_Previews: PreviewProvider {
     static var previews: some View {
-        Onboarding()
+        WelcomeScreens()
     }
 }

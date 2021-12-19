@@ -10,14 +10,15 @@ class NotificationRequestManager: NSObject, ObservableObject {
 }
 
 extension NotificationRequestManager: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         self.notificationData = response
         
         completionHandler()
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("presenting local notification in foreground");
+        
+        // This will present notification when the app is in foreground
         completionHandler([.banner, .list, .sound])
     }
 }

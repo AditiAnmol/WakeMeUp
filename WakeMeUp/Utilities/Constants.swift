@@ -1,7 +1,7 @@
 import Foundation
 
 class Constants {
-    static let DayToCalendarInt = [
+    static let DAYS = [
         "SUN": 1,
         "MON": 2,
         "TUE": 3,

@@ -1,6 +1,6 @@
 import Foundation
 
-class MusicListViewModel {
+class MusicModel {
     func playMusic(name: String) {
         AudioController.shared.playSoundEffect(for: name)
     }

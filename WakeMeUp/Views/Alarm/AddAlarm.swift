@@ -1,17 +1,18 @@
 import SwiftUI
 
+// Add new alarm view
 struct AddAlarm: View {
-    @StateObject private var viewModel = AlarmViewModel()
+    @StateObject private var viewModel = AlarmModel()
     @Environment(\.presentationMode) var presentationMode
     
-    private var durations = ["0 min", "0.5 min", "1 min", "1.5 min", "2.0 min", "2.5 min", "3 min"]
+    private var timeDuration = ["0 min", "0.5 min", "1 min", "1.5 min", "2.0 min", "2.5 min", "3 min"]
     
-    @State private var alarmName = ""
-    @State private var alarmDate = Date()
+    @State private var name = ""
+    @State private var date = Date()
     @State private var actualAlarmDate = Date()
-    @State private var alarmMusic: String? = "Adventure"
-    @State private var alarmDuration = "0 min"
-    @State private var alarmRepeat = [
+    @State private var music: String? = "Adventure"
+    @State private var duration = "0 min"
+    @State private var repeatDays = [
         ("SUN", false),
         ("MON", false),
         ("TUE", false),
@@ -25,40 +26,41 @@ struct AddAlarm: View {
         NavigationView {
             Form {
                 Section(header: Text("Alarm Information")) {
-                    TextField("Label", text: $alarmName)
-                    DatePicker("Time", selection: $alarmDate, displayedComponents: .hourAndMinute)
-                        .onChange(of: alarmDate) { date in
+                    TextField("Label", text: $name)
+                    DatePicker("Time", selection: $date, displayedComponents: .hourAndMinute)
+                        .onChange(of: date) { date in
+                            // Date picker has an existing issue and doesn't update the selection variable. Hence, this hack
                             actualAlarmDate = date
                         }
                     NavigationLink(
-                        destination: MusicList(selectedMusic: $alarmMusic),
+                        destination: MusicList(selectedMusic: $music),
                         label: {
                             HStack {
                                 Text("Sound")
                                 Spacer()
-                                Text(alarmMusic!)
+                                Text(music!)
                                     .foregroundColor(.gray)
                             }
                         })
                 }
                 Section(header: Text("Repeat")) {
                     HStack {
-                        ForEach(alarmRepeat.indices, id: \.self) { index in
+                        ForEach(repeatDays.indices, id: \.self) { index in
                             ZStack {
                                 Circle()
-                                    .fill(alarmRepeat[index].1 ? Color("TabBarHighlight") : Color(#colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)))
-                                Text(alarmRepeat[index].0.first?.description ?? "")
+                                    .fill(repeatDays[index].1 ? Color("TabBarHighlight") : Color(#colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)))
+                                Text(repeatDays[index].0.first?.description ?? "")
                                     .foregroundColor(.white)
                                     .onTapGesture {
-                                        alarmRepeat[index].1.toggle()
+                                        repeatDays[index].1.toggle()
                                     }
                             }
                         }
                     }
                 }
                 Section(header: Text("Mission")) {
-                    Picker("Duration", selection: $alarmDuration) {
-                        ForEach(durations, id: \.self) { duration in
+                    Picker("Duration", selection: $duration) {
+                        ForEach(timeDuration, id: \.self) { duration in
                             Text(duration)
                         }
                     }
@@ -70,12 +72,14 @@ struct AddAlarm: View {
         }
     }
     
+    // Closes the Add Alarm view
     private func dismissSheet() {
         presentationMode.wrappedValue.dismiss()
     }
     
+    // Send data to model to save the alarm
     private func saveAlarm() {
-        viewModel.addAlarm(name: self.alarmName, time: self.actualAlarmDate, music: self.alarmMusic!, alarmDuration: self.alarmDuration, repeats: self.alarmRepeat)
+        viewModel.addAlarm(name: self.name, time: self.actualAlarmDate, music: self.music!, alarmDuration: self.duration, repeats: self.repeatDays)
         
         self.dismissSheet()
     }

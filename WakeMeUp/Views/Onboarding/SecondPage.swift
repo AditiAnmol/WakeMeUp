@@ -28,6 +28,7 @@ struct SecondPage: View {
         }
     }
     
+    // Redirects the user to request for notifiaction
     private func goToNotificationPage() {
         UserDefaults.standard.set(true, forKey: "didLaunchBefore")
         

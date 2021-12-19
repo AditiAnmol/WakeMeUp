@@ -12,6 +12,7 @@ class AudioController {
     
     var player = AVAudioPlayer()
     
+    // Uses AVAudioPlayer to play music when requested
     func playSoundEffect(for name: String) {
         do {
             player = try AVAudioPlayer(contentsOf: musicList[name]!!)

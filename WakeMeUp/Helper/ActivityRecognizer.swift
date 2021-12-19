@@ -1,18 +1,19 @@
 import Foundation
 import CoreMotion
 
+// Used to track and update the activity state
 class ActivityRecognizer {
     var activityManager: CMMotionActivityManager!
     
-    var doingActivity = false
+    var isActivityGoingOn = false
     
     init() {
         self.activityManager = CMMotionActivityManager()
         self.activityManager.startActivityUpdates(to: .main) { activity in
             if (activity?.stationary)! {
-                self.doingActivity = false
+                self.isActivityGoingOn = false
             } else {
-                self.doingActivity = true
+                self.isActivityGoingOn = true
             }
         }
     }

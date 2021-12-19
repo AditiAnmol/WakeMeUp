@@ -6,8 +6,7 @@ struct NotificationRequest: View {
     var body: some View {
         VStack {
             VStack(spacing: 20) {
-                Image("")
-                Text("To stop the alarm \n take the desired steps \n to complete your activity!")
+                Text("We would need access to notifications to show and ring the alarm.")
                     .multilineTextAlignment(.center)
                     .font(.title3)
             }

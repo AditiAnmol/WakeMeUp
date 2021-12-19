@@ -1,20 +1,20 @@
 import SwiftUI
 
-struct MainTriggeredAlarmView: View {
+struct AlarmActivityView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @EnvironmentObject var notificationRequestManager: NotificationRequestManager
 
-    @State private var currentTab = 1
+    @State private var currentPage = 1
     @State private var alarmName = "Wake up"
     @State private var alarmTime: Int16 = 0
 
     var body: some View {
         Group {
-            switch currentTab {
+            switch currentPage {
                 case 1:
-                    AlarmNotificationView(currentPage: $currentTab, alarmName: alarmName, alarmTime: alarmTime)
+                    AlarmNotificationView(currentPage: $currentPage, alarmName: alarmName, alarmTime: alarmTime)
                 case 2:
-                    AlarmStopView(currentPage: $currentTab, alarmTime: alarmTime)
+                    AlarmStopView(currentPage: $currentPage, alarmTime: alarmTime)
                         .environmentObject(viewRouter)
                         .environmentObject(notificationRequestManager)
                 case 3:
@@ -25,13 +25,7 @@ struct MainTriggeredAlarmView: View {
         }
         .onAppear(perform: {
             alarmName = (notificationRequestManager.notificationData.notification.request.content.userInfo["title"] as? String)!
-
-
             let duration = (notificationRequestManager.notificationData.notification.request.content.userInfo["duration"] as? String)!
-            
-//            alarmName = "Some Name"
-//            let duration = "1 min"
-            
             let str = duration.split(separator: " ")
             alarmTime = Int16(Double(str[0])! * 60)
         })
@@ -40,6 +34,6 @@ struct MainTriggeredAlarmView: View {
 
 struct MainTriggeredAlarmView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTriggeredAlarmView()
+        AlarmActivityView()
     }
 }

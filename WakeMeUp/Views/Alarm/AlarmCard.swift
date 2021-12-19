@@ -1,11 +1,16 @@
 import SwiftUI
 
+/*
+ Shows the alarm data in a card.
+ Swipe the card to delete it.
+ Tap on the card to toggle the active state of the alarm
+*/
 struct AlarmCard: View {
-    @StateObject private var viewModel = AlarmViewModel()
+    @StateObject private var viewModel = AlarmModel()
     @ObservedObject var alarm: Alarm
     
     @State private var isEditing = false
-    @State private var horizontalOffset = CGFloat.zero
+    @State private var xOffset = CGFloat.zero
     
     var body: some View {
         VStack(alignment: .trailing) {
@@ -40,7 +45,7 @@ struct AlarmCard: View {
         .cornerRadius(25)
         .padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
         .foregroundColor(self.alarm.active ? .white : .black)
-        .offset(x: horizontalOffset)
+        .offset(x: xOffset)
         .onTapGesture {
             viewModel.toggleAlarm(for: alarm)
         }
@@ -59,24 +64,25 @@ struct AlarmCard: View {
     
     private func onSwipe(value: DragGesture.Value) {
         if value.translation.width < 0 {
-            self.horizontalOffset = value.translation.width
+            self.xOffset = value.translation.width
         }
     }
     
     private func onSwipeEnd(value: DragGesture.Value) {
         withAnimation(.easeOut) {
             if value.translation.width < 0 {
-                if -self.horizontalOffset > 50 {
-                    self.horizontalOffset = -80
+                if -self.xOffset > 50 {
+                    self.xOffset = -80
                 } else {
-                    self.horizontalOffset = 0
+                    self.xOffset = 0
                 }
             } else if value.translation.width > 20 {
-                self.horizontalOffset = 0
+                self.xOffset = 0
             }
         }
     }
     
+    // Show time formatted as H:MM am/pm
     private func formatTime(for date: Date) -> String {
         let formatter = DateFormatter()
         

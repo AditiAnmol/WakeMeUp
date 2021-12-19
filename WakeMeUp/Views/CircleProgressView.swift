@@ -1,5 +1,6 @@
 import SwiftUI
 
+// Shows the progress of the activity
 struct CircleProgressView: View {
     @Binding var value: Double
     

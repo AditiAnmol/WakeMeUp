@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct AlarmListView: View {
-    @StateObject private var viewModel = AlarmViewModel()
+    @StateObject private var viewModel = AlarmModel()
     @State private var editMode = false
     
     var body: some View {
         Group {
             if viewModel.alarms.isEmpty {
                 VStack {
-                    Text("No alarms added.")
+                    Text("No alarms added yet.")
                         .font(.title3)
                 }
             } else {

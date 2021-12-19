@@ -8,7 +8,7 @@ struct AlarmNotificationView: View {
     @State private var timer: Timer!
     
     @State private var alarmDate = ""
-    @State private var currentTime = "Retrieving time.."
+    @State private var showTimeText = "Retrieving time.."
     
     var body: some View {
         ZStack {
@@ -21,7 +21,7 @@ struct AlarmNotificationView: View {
                 VStack(spacing: 10) {
                     Text(alarmDate)
                         .font(.title)
-                    Text(currentTime)
+                    Text(showTimeText)
                         .font(.title)
                 }
                 .offset(y: -50)
@@ -58,15 +58,15 @@ struct AlarmNotificationView: View {
             formatter.dateFormat = "h:mm:ss a"
             
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                currentTime = formatter.string(from: Date())
+                showTimeText = formatter.string(from: Date())
             }
         })
     }
     
-    private func snoozeAlarm() {
-        
-    }
+    // Snooze Functionality not implemented
+    private func snoozeAlarm() {}
     
+    // Stop the alarm sound and show the required page
     private func stopAlarm() {
         withAnimation {
             if alarmTime == 0 {

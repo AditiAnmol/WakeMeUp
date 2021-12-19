@@ -7,13 +7,13 @@ struct AlarmStopView: View {
     
     var alarmTime: Int16
     
-    @ObservedObject private var viewModel = AlarmTriggeredViewModel()
+    @ObservedObject private var alarmTriggeredData = AlarmTriggeredModel()
     
     init(currentPage: Binding<Int>, alarmTime: Int16) {
         self._currentPage = currentPage
         self.alarmTime = alarmTime
         
-        self.viewModel.activityDuration = alarmTime
+        self.alarmTriggeredData.activityDuration = alarmTime
     }
     
     var body: some View {
@@ -23,13 +23,13 @@ struct AlarmStopView: View {
                 Text("Let's walk for \(String(format: "%.1f", Double(alarmTime) / 60)) minutes!")
                     .font(.title)
                     .bold()
-                CircleProgressView(value: $viewModel.progress)
+                CircleProgressView(value: $alarmTriggeredData.progress)
                     .frame(width: 250, height: 250, alignment: .center)
-                Text(viewModel.activityStatus)
+                Text(alarmTriggeredData.activityStatus)
                     .font(.title2)
                 Spacer()
-                if viewModel.alarmStopped {
-                    Button(action: finishActivity, label: {
+                if alarmTriggeredData.alarmStopped {
+                    Button(action: stopActivity, label: {
                         Text("Finish")
                             .frame(width: 250, height: 45, alignment: .center)
                             .background(Color(#colorLiteral(red: 0.8862745098, green: 0.8352941176, blue: 0.8, alpha: 1)))
@@ -47,10 +47,9 @@ struct AlarmStopView: View {
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
     }
     
-    private func finishActivity() {
+    private func stopActivity() {
         withAnimation {
             notificationRequestManager.notificationData = nil
-            
             currentPage = 3
             viewRouter.currentPage = .alarm
         }
