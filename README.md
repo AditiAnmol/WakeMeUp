@@ -25,4 +25,3 @@ We need to select the current day for the alarm to trigger on that day itself. I
 3. The application doesn't make it compulsory for the user to always complete the activity to stop the alarm. If the user clears the notification then the activity screen is not shown.
 4. Snooze alarm is not implemented. The function is left blank.
 5. We need to select the current day for the alarm to trigger on that day itself. If none of the day is selected then that alarm won't ring anytime.
-6. If the user selected activity Duration as '0 min', then the activity page goes in a loop and we are not able to stop the alarm.

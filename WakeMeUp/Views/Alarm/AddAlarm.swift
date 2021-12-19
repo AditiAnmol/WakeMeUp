@@ -5,13 +5,13 @@ struct AddAlarm: View {
     @StateObject private var viewModel = AlarmModel()
     @Environment(\.presentationMode) var presentationMode
     
-    private var timeDuration = ["0 min", "0.5 min", "1 min", "1.5 min", "2.0 min", "2.5 min", "3 min"]
+    private var timeDuration = ["0.5 min", "1 min", "1.5 min", "2.0 min", "2.5 min", "3 min"]
     
     @State private var name = ""
     @State private var date = Date()
     @State private var actualAlarmDate = Date()
     @State private var music: String? = "Sound 1"
-    @State private var duration = "0 min"
+    @State private var duration = "0.5 min"
     @State private var repeatDays = [
         ("SUN", false),
         ("MON", false),
