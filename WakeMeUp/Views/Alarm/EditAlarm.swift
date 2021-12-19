@@ -1,5 +1,6 @@
 import SwiftUI
 
+// Logic similar to AddAlarm, due to time crunch copied all the code here and made the required changes.
 struct EditAlarm: View {
     @StateObject private var viewModel = AlarmModel()
     @Environment(\.presentationMode) var presentationMode
@@ -8,11 +9,11 @@ struct EditAlarm: View {
     
     private var durations = ["0 min", "0.5 min", "1 min", "1.5 min", "2.0 min", "2.5 min", "3 min"]
 
-    @State private var alarmName = ""
-    @State private var alarmDate = Date()
-    @State private var alarmMusic: String? = "Adventure"
-    @State private var alarmDuration = "0 min"
-    @State private var alarmRepeat = [
+    @State private var name = ""
+    @State private var date = Date()
+    @State private var music: String? = "Sound 1"
+    @State private var duration = "0 min"
+    @State private var repeatDays = [
         ("SUN", false),
         ("MON", false),
         ("TUE", false),
@@ -25,19 +26,19 @@ struct EditAlarm: View {
     init(alarm: Alarm) {
         self.alarm = alarm
         
-        var repeats = alarmRepeat
+        var repeats = repeatDays
         for i in repeats.indices {
-            repeats[i].1 = alarm.repeatOn!.contains(alarmRepeat[i].0)
+            repeats[i].1 = alarm.repeatOn!.contains(repeatDays[i].0)
         }
         
-        _alarmRepeat = State(initialValue: repeats)
-        _alarmName = State(initialValue: alarm.name!)
-        _alarmDate = State(initialValue: alarm.time!)
-        _alarmMusic = State(initialValue: alarm.music!)
+        _repeatDays = State(initialValue: repeats)
+        _name = State(initialValue: alarm.name!)
+        _date = State(initialValue: alarm.time!)
+        _music = State(initialValue: alarm.music!)
         if alarm.activityDuration == 0 {
-            _alarmDuration = State(initialValue: "0 min")
+            _duration = State(initialValue: "0 min")
         } else {
-            _alarmDuration = State(initialValue: "\(String(Double(alarm.activityDuration) / 60)) min")
+            _duration = State(initialValue: "\(String(Double(alarm.activityDuration) / 60)) min")
         }
     }
     
@@ -45,36 +46,36 @@ struct EditAlarm: View {
         NavigationView {
             Form {
                 Section(header: Text("Alarm Information")) {
-                    TextField("Alarm Name", text: $alarmName)
-                    DatePicker("Time", selection: $alarmDate, displayedComponents: .hourAndMinute)
+                    TextField("Alarm Name", text: $name)
+                    DatePicker("Time", selection: $date, displayedComponents: .hourAndMinute)
                     NavigationLink(
-                        destination: MusicList(selectedMusic: $alarmMusic),
+                        destination: MusicList(selectedMusic: $music),
                         label: {
                             HStack {
                                 Text("Music")
                                 Spacer()
-                                Text(alarmMusic!)
+                                Text(music!)
                                     .foregroundColor(.gray)
                             }
                         })
                 }
                 Section(header: Text("Alarm Repeat")) {
                     HStack {
-                        ForEach(alarmRepeat.indices, id: \.self) { index in
+                        ForEach(repeatDays.indices, id: \.self) { index in
                             ZStack {
                                 Circle()
-                                    .fill(alarmRepeat[index].1 ? Color("TabBarHighlight") : Color(#colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)))
-                                Text(alarmRepeat[index].0.first?.description ?? "")
+                                    .fill(repeatDays[index].1 ? Color("TabBarHighlight") : Color(#colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)))
+                                Text(repeatDays[index].0.first?.description ?? "")
                                     .foregroundColor(.white)
                                     .onTapGesture {
-                                        alarmRepeat[index].1.toggle()
+                                        repeatDays[index].1.toggle()
                                     }
                             }
                         }
                     }
                 }
                 Section(header: Text("Alarm Activity")) {
-                    Picker("Duration", selection: $alarmDuration) {
+                    Picker("Duration", selection: $duration) {
                         ForEach(durations, id: \.self) { duration in
                             Text(duration)
                         }
@@ -92,7 +93,7 @@ struct EditAlarm: View {
     }
     
     private func saveAlarm() {
-        viewModel.editAlarm(alarm: alarm, name: alarmName, time: alarmDate, music: alarmMusic!, activityDuration: alarmDuration, repeats: alarmRepeat)
+        viewModel.editAlarm(alarm: alarm, name: name, time: date, music: music!, activityDuration: duration, repeats: repeatDays)
         
         self.dismissSheet()
     }

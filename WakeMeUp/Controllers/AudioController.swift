@@ -4,10 +4,10 @@ class AudioController {
     static let shared = AudioController()
     
     let musicList = [
-        "Bell": Bundle.main.url(forResource: "Bell", withExtension: "wav"),
-        "Once Again": Bundle.main.url(forResource: "Once Again", withExtension: "wav"),
-        "Tenderness": Bundle.main.url(forResource: "Tenderness", withExtension: "wav"),
-        "Adventure": Bundle.main.url(forResource: "Adventure", withExtension: "wav"),
+        "Sound 1": Bundle.main.url(forResource: "Sound 1", withExtension: "wav"),
+        "Sound 2": Bundle.main.url(forResource: "Sound 2", withExtension: "wav"),
+        "Sound 3": Bundle.main.url(forResource: "Sound 3", withExtension: "wav"),
+        "Sound 4": Bundle.main.url(forResource: "Sound 4", withExtension: "wav"),
     ]
     
     var player = AVAudioPlayer()

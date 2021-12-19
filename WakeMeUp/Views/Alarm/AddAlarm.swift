@@ -10,7 +10,7 @@ struct AddAlarm: View {
     @State private var name = ""
     @State private var date = Date()
     @State private var actualAlarmDate = Date()
-    @State private var music: String? = "Adventure"
+    @State private var music: String? = "Sound 1"
     @State private var duration = "0 min"
     @State private var repeatDays = [
         ("SUN", false),

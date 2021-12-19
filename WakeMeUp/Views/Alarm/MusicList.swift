@@ -4,7 +4,7 @@ import SwiftUI
 struct MusicList: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var viewModel = MusicModel()
-    let musics = ["Adventure", "Bell", "Once Again", "Tenderness"]
+    let musics = ["Sound 1", "Sound 2", "Sound 3", "Sound 4"]
     
     @Binding var selectedMusic: String?
     
