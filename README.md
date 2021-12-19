@@ -19,6 +19,8 @@ Another important thing to note is that, user will have to click on Allow notifi
 
 We need to select the current day for the alarm to trigger on that day itself. If none of the day is selected then that alarm won't ring anytime. (also included this in issues)
 
+For the activity/motion detection to work, user needs to allow to track activity when promted on the activity screen.
+
 # Issues
 1. When the phone is not locked, the notification pops at the specified alarm time and the Music is played in the background. However, the music stops as soon as the pop up goes away (probably music only plays for 3-5 seconds)
 2. When the phone is locked, the notification pops at the specified alarm time and the Music is played in the background. However, the music stops after sometime of playing or when we try to unlock the phone.

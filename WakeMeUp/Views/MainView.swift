@@ -7,14 +7,10 @@ struct MainView: View {
     var body: some View {
         if (notificationRequestManager.notificationData != nil) {
             AlarmActivityView()
-                .environmentObject(notificationRequestManager)
-                .environmentObject(viewRouter)
         } else if viewRouter.currentPage == .onboarding {
             WelcomeScreens()
-                .environmentObject(viewRouter)
         } else if viewRouter.currentPage == .notificationRequest {
             NotificationRequest()
-                .environmentObject(viewRouter)
         } else {
             GeometryReader { geometry in
                 NavigationView {

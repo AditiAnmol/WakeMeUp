@@ -10,6 +10,7 @@ struct WakeMeUpApp: App {
         WindowGroup {
             MainView(viewRouter: viewRouter)
                 .environmentObject(notificationRequestManager)
+                .environmentObject(viewRouter)
         }
     }
 }

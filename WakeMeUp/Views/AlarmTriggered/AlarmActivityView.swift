@@ -15,8 +15,6 @@ struct AlarmActivityView: View {
                     AlarmNotificationView(currentPage: $currentPage, alarmName: alarmName, alarmTime: alarmTime)
                 case 2:
                     AlarmStopView(currentPage: $currentPage, alarmTime: alarmTime)
-                        .environmentObject(viewRouter)
-                        .environmentObject(notificationRequestManager)
                 case 3:
                     MainView(viewRouter: viewRouter)
                 default:

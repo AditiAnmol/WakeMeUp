@@ -20,7 +20,6 @@ struct WelcomeScreens: View {
                     SecondPage()
                         .tag(2)
                 })
-            .environmentObject(viewRouter)
             .tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }

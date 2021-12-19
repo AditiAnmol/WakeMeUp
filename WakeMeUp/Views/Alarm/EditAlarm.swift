@@ -7,12 +7,12 @@ struct EditAlarm: View {
     
     @ObservedObject var alarm: Alarm
     
-    private var durations = ["0 min", "0.5 min", "1 min", "1.5 min", "2.0 min", "2.5 min", "3 min"]
+    private var durations = ["0.5 min", "1 min", "1.5 min", "2.0 min", "2.5 min", "3 min"]
 
     @State private var name = ""
     @State private var date = Date()
     @State private var music: String? = "Sound 1"
-    @State private var duration = "0 min"
+    @State private var duration = "0.5 min"
     @State private var repeatDays = [
         ("SUN", false),
         ("MON", false),
@@ -36,7 +36,7 @@ struct EditAlarm: View {
         _date = State(initialValue: alarm.time!)
         _music = State(initialValue: alarm.music!)
         if alarm.activityDuration == 0 {
-            _duration = State(initialValue: "0 min")
+            _duration = State(initialValue: "0.5 min")
         } else {
             _duration = State(initialValue: "\(String(Double(alarm.activityDuration) / 60)) min")
         }
